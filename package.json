@@ -1,0 +1,30 @@
+{
+  "name": "mailclient",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.7.2",
+    "immutable": "^3.8.2",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.2",
+    "object-merge-advanced": "^8.3.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-icons": "^2.2.7",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "1.1.0",
+    "redux": "^3.7.2"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/stylesheets/ -o src/stylesheets/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/stylesheets/ -o src/stylesheets/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom"
+  }
+}

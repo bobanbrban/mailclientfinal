@@ -1,0 +1,57 @@
+.mailBodyList {
+  text-align: left;
+  font-size: 12px;
+  color: #9B9B9B;
+  padding-left: 25px;
+  text-align: justify; }
+
+.Date {
+  text-align: right;
+  margin-right: 20px;
+  margin-left: 40px;
+  float: right;
+  font-size: .7em; }
+
+.User {
+  margin-right: 10px;
+  margin-left: 23px;
+  width: 13px;
+  text-align: left; }
+
+.Sender {
+  font-size: 12px;
+  text-align: left;
+  margin-left: 11px;
+  padding-left: 11px; }
+
+.senderName {
+  font-size: 14px;
+  font-weight: bold; }
+
+.Circle {
+  backround-color: #4990E2;
+  color: #4990E2;
+  width: 11px;
+  padding-right: 4px; }
+
+.Subject-list {
+  padding-bottom: 3px;
+  margin-left: 10px; }
+
+.Title {
+  margin-left: 10px;
+  padding-top: 8px;
+  font-size: 14px; }
+
+.margintitle {
+  position: sticky;
+  left: 27px; }
+
+.active {
+  color: #4990E2; }
+
+.off {
+  display: none; }
+
+.mailRightOnClick {
+  visibility: hidden; }
