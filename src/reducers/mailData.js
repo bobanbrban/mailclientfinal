@@ -17,7 +17,7 @@ export function mailsdata(state = {mails:initalState}, action) {
    case actionTypes.GET_MAIL_NEW:
     return Object.assign({}, state, {
         mails: [
-          ...state.mails,...initalState
+          ...initalState,...state.mails
         ]
       })
   case actionTypes.SET_RIGHT:
