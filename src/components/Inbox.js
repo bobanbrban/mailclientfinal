@@ -19,7 +19,7 @@ class Inbox extends React.Component {
         let { onSetNewData } = this.props;
          setInterval(() => {
                onSetNewData();
-             }, 10000);       
+             }, 90000);       
  }
   render() {
        const { state } = this.props;
