@@ -1,0 +1,65 @@
+@media screen and (max-width: 1350px) {
+  .rightSide {
+    max-width: 70%; } }
+
+@media screen and (max-width: 1130px) {
+  .rightSide {
+    max-width: 65%; } }
+
+@media screen and (max-width: 1000px) {
+  .rightSide {
+    max-width: 60%; } }
+
+@media screen and (max-width: 900px) {
+  .Project {
+    padding: 20px;
+    margin: 5px; } }
+
+@media screen and (max-width: 800px) {
+  .rightSide {
+    max-width: 50%; }
+  .Project {
+    padding: 20px; }
+  .mainIcons {
+    font-size: 15px;
+    text-align: center; } }
+
+@media screen and (max-width: 700px) {
+  .rightSide {
+    max-width: 40%; }
+  .Project {
+    padding: 20px;
+    margin: 3px; }
+  h5 {
+    font-size: small;
+    padding: 0px;
+    margin: 30px 0px 10px 0px; }
+  .mainIcons {
+    margin-right: 80px;
+    font-size: 13px;
+    text-align: center; }
+  .MailPic {
+    display: none; } }
+
+@media screen and (max-width: 600px) {
+  .rightSide {
+    max-width: 35%; }
+  .Project {
+    padding: 10px;
+    margin: 3px; }
+  .mainIcons {
+    margin-right: 80px;
+    font-size: 10px;
+    text-align: center; }
+  h5 {
+    font-size: small;
+    padding: 10px;
+    margin: 30px 0px 10px 0px; }
+  .MailPic {
+    display: none; } }
+
+@media screen and (max-width: 530px) {
+  .rightSide {
+    display: none; }
+  .MailPic {
+    display: none; } }

@@ -1,0 +1,109 @@
+$backGround: #f9f9f9;
+$shortDescription: #9B9B9B;
+$backGround: #f9f9f9;
+$selectedBar: #4990E2;
+$selectedBG: #F9F9F9;
+$text: #333333;
+$border: #B5B5B5;
+
+
+
+
+.mailBodyList {
+
+	  text-align: left;
+	  font-size:12px;
+	  color: $shortDescription;
+	  padding-left: 25px;
+	  text-align: justify;
+
+
+}
+
+.Subject {
+
+	}
+
+
+.Date {
+
+	 text-align: right;
+	 margin-right: 20px;
+	 margin-left: 40px;
+	float:right;
+	font-size: .7em;
+
+}
+
+
+.User {
+
+	margin-right: 10px;
+	margin-left: 23px;
+	width: 13px;
+
+	text-align:left;
+}
+
+
+.Sender {
+
+	font-size: 12px;
+	text-align: left;
+	margin-left: 11px;
+	padding-left: 11px;
+
+}
+
+.senderName {
+
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.Circle {
+
+	backround-color: $selectedBar ;
+	color: $selectedBar ;
+	width:11px;
+	padding-right: 4px;
+}
+
+.Subject-list   {
+
+	padding-bottom: 3px;
+	margin-left: 10px;
+}
+
+.Title {
+
+	margin-left: 10px;
+	padding-top: 8px;
+	font-size: 14px;
+
+
+}
+
+.margintitle {
+
+	position:sticky;
+
+	left: 27px;
+}
+
+
+.active {
+
+	 color: $selectedBar;
+}
+
+.off {
+  display: none;
+
+
+}
+
+.mailRightOnClick {
+
+	visibility: hidden;
+}

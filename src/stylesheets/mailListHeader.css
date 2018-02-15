@@ -1,0 +1,32 @@
+.mailListHeader {
+  max-width: 315px;
+  text-align: right;
+  height: 50px;
+  padding-top: 10px;
+  padding-right: 15px;
+  border: 1px solid #B5B5B5; }
+
+a {
+  color: #333333; }
+
+.Spam-link {
+  text-decoration: none;
+  padding-right: 15px; }
+
+.Inbox-link {
+  text-decoration: none;
+  color: #4990E2; }
+
+.Trash-link {
+  text-decoration: none;
+  color: #4990E2; }
+
+.Icon {
+  width: 19px;
+  margin-left: 9px; }
+
+Link {
+  text-decoration: none; }
+
+a:Link {
+  text-decoration: none; }

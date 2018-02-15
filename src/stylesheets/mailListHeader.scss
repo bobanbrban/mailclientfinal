@@ -1,0 +1,58 @@
+$backGround: #f9f9f9;
+$selectedBar: #4990E2;
+$selectedBG: #F9F9F9;
+$text: #333333;
+$border: #B5B5B5;
+
+
+.mailListHeader {
+	 max-width: 315px;
+	 text-align: right;
+	 height: 50px;
+	 padding-top: 10px;
+	 padding-right: 15px;
+	 border: 1px solid $border;
+	 
+}
+
+
+
+a {
+   color: $text;
+
+}
+
+.Spam-link {
+	text-decoration: none;
+	padding-right: 15px;
+}
+
+.Inbox-link  {
+
+	text-decoration: none;
+	color: $selectedBar;
+}
+
+
+.Trash-link  {
+
+	text-decoration: none;
+	color: $selectedBar;
+}
+
+.Icon {
+	width:19px;
+	margin-left: 9px;
+}
+
+
+Link {
+	
+	text-decoration: none;
+
+}
+
+a:Link {
+    text-decoration: none;
+}
+

@@ -1,0 +1,61 @@
+$backGround: #f9f9f9;
+$shortDescription: #9B9B9B;
+$backGround: #f9f9f9;
+$selectedBar: #4990E2;
+$selectedBG: #F9F9F9;
+$text: #333333;
+$border: #B5B5B5;
+
+
+.mailsList {
+
+  margin: 0px;
+  padding: 0px;
+  width:330px;
+  height: 1080px;
+  float: left;
+  border-right: 2px solid $border;
+  list-style-type: none ;
+  overflow: scroll;
+
+}
+
+
+li {
+
+border-bottom: 1px solid $border;
+padding-top: 15px;
+
+}
+
+
+ a:hover {
+
+   color: $selectedBar;
+
+}
+
+
+.mail1 {
+
+    width: 320px;
+    height: 80px;
+    overflow: hidden;
+
+}
+
+.mail2 {
+
+    width: 320px;
+    height: 80px;
+    overflow: hidden;
+
+}
+
+
+
+li:hover  {
+
+   border-left: 3px solid $selectedBar;
+
+  }
