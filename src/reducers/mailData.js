@@ -49,7 +49,8 @@ export function mailsdata(state = {mails:initalState}, action) {
     mails: state.mails.map((mail, index) => {
       if (index === action.index) {
         return Object.assign({}, mail, {
-          isSpam: true
+          isSpam: true,
+          showRight: false,
         })
       }
       return mail
