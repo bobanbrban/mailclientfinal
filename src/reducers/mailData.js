@@ -37,8 +37,8 @@ export function mailsdata(state = {mails:initalState}, action) {
       if (index === action.index) {
         return Object.assign({}, mail, {
           isTrash: true,
+          isSpam: false,
           showRight: false,
-
         })
       }
       return mail
@@ -50,6 +50,7 @@ export function mailsdata(state = {mails:initalState}, action) {
       if (index === action.index) {
         return Object.assign({}, mail, {
           isSpam: true,
+          isTrash: false,
           showRight: false,
         })
       }

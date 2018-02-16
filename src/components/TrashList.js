@@ -8,19 +8,19 @@ import '../stylesheets/mediaQueries.css';
 
 class TrashList extends Component {
     render() {
-      let MailItemsthird;
+      let MailItems;
       let mailstest= this.props.mailList;
       if(mailstest) {
-         MailItemsthird = mailstest.map((mail,i) => {
-          if(mail.isSpam === true) {
+         MailItems = mailstest.map((mail,i) => {
+          if(mail.isTrash === true && mail.isSpam === false) {
           return (
-          <li className="mail1" id="mailRight" ><MailItem key={i} i={i} {...this.props} mail={mail}/></li>
+          <li className="mail1" id="mailRight" ><MailItem key={i} i={i} mail={mail}/></li>
         )};
       });
     } 
   return  (
       <div className="mailList">
-       {MailItemsthird}
+       {MailItems}
       </div>
       );
   }
