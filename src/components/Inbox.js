@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actionTypes from '../actions/actionCreators';
-import MailList from './MailList';
+import InboxList from './InboxList';
 import * as MailImage from '../assets/mail.svg';
 import '../stylesheets/mailList.css';
 import '../stylesheets/mailListHeader.css';
@@ -9,7 +9,6 @@ import '../stylesheets/mailListItem.css';
 import '../stylesheets/mailBody.css';
 import '../stylesheets/mediaQueries.css';
            
-
 class Inbox extends React.Component {
   componentWillMount() {
     const { getMail } = this.props;
@@ -19,14 +18,14 @@ class Inbox extends React.Component {
         let { onSetNewData } = this.props;
          setInterval(() => {
                onSetNewData();
-             }, 90000);       
+             }, 10000);       
  }
   render() {
        const { state } = this.props;
       return (
           <div>
             <div id="cloneTest" className="mailsList">
-              <MailList mailList={state.mailsdata.mails}/>
+              <InboxList mailList={state.mailsdata.mails}/>
             </div> 
           <img src={MailImage} className="MailPic" width="250px height=250px" alt="logo" />
         </div>
