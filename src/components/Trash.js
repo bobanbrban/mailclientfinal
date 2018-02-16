@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import MailListsec from './MailListsec';
+import TrashList from './TrashList';
 import * as MailImage from '../assets/mail.svg';
 import '../stylesheets/mailList.css';
 import '../stylesheets/mailListHeader.css';
@@ -14,7 +14,7 @@ class Trash extends React.Component {
       return (
           <div>
             <div id="cloneTest" className="mailsList">
-              <MailListsec mailList={state.mailsdata.mails}/>
+              <TrashList mailList={state.mailsdata.mails}/>
             </div> 
           <img src={MailImage} className="MailPic" width="250px height=250px" alt="logo" />
         </div>

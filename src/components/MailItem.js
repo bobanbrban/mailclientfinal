@@ -27,7 +27,6 @@ class MailItemtest extends Component {
      const { onSetRight } = this.props;
      onSetReaded();
      onSetRight();
-
   }
   onClickReadedBack = () => {
      const { onSetReadedBack } = this.props;
