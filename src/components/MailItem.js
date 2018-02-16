@@ -14,14 +14,7 @@ import * as actionTypes from '../actions/actionCreators';
 
 
 class MailItemtest extends Component {
-  onClickTrash = () => {
-     const { onSetTrash } = this.props;
-     onSetTrash();
-  }
-  onClickSpam = () => {
-     const { onSetSpam } = this.props;
-     onSetSpam();
-  }
+
   onClickReaded = () => {
      const { onSetReaded } = this.props;
      const { onSetRight } = this.props;
@@ -32,6 +25,16 @@ class MailItemtest extends Component {
      const { onSetReadedBack } = this.props;
      onSetReadedBack(); 
   }
+   onClickSpamLocal = () =>{
+    this.props.mail.isSpam = true;
+    this.props.mail.isTrash = false;
+    this.props.mail.showRight = false;  
+  }
+  onClickTrashLocal = () =>{
+    this.props.mail.isTrash = true;  
+    this.props.mail.isSpam = false;
+    this.props.mail.showRight = false;
+  }  
   render() {
      const {mail} =this.props;
      const { i } = this.props;
@@ -49,9 +52,9 @@ class MailItemtest extends Component {
       {mail.showRight && <div id="rightHidden" className="rightSide">
         <h5 className="subjectMain">{mail.subject}
              <span className="mainIcons">
-                <Link to="#" className="mainInbox-link" ><FaCircle onClick={this.onClickReadedBack.bind(this,i)} className="mainIconCircle" /></Link>
-                <Link to="#"  className="mainTrash-link"><span onClick={this.onClickTrash.bind(this,i)}><FaTrash className= "mainIconTrash"/></span></Link>
-                <Link to="#" className="mainSpam-link"><FaBug onClick={this.onClickSpam} className="mainIconSpam"/></Link>
+                <Link to="#" className="mainInbox-link" ><FaCircle onClick={this.onClickReadedBack} className="mainIconCircle" /></Link>
+                <Link to="#"  className="mainTrash-link"><span onClick={this.onClickTrashLocal}><FaTrash className= "mainIconTrash"/></span></Link>
+                <Link to="#" className="mainSpam-link"><FaBug onClick={this.onClickSpamLocal} className="mainIconSpam"/></Link>
              </span>
           </h5>
             <div className="mailRight">

@@ -6,24 +6,24 @@ import '../stylesheets/mailListItem.css';
 import '../stylesheets/mailBody.css';
 import '../stylesheets/mediaQueries.css';
 
-class SpamList extends Component {
+class TrashList extends Component {
     render() {
-      let MailItemssec;
+      let MailItems;
       let mailstest= this.props.mailList;
       if(mailstest) {
-         MailItemssec = mailstest.map((mail,i) => {
-          if(mail.isTrash === true) {
+         MailItems = mailstest.map((mail,i) => {
+          if(mail.isSpam === true && mail.isTrash === false) {
           return (
-          <li className="mail1" id="mailRight" ><MailItem {...this.props} key={i} i={i} mail={mail}/></li>
+          <li className="mail1" id="mailRight" ><MailItem key={i} i={i} mail={mail}/></li>
         )};
       });
     } 
   return  (
       <div className="mailList">
-       {MailItemssec}
+       {MailItems}
       </div>
       );
   }
 }
 
-export default SpamList;
+export default TrashList;

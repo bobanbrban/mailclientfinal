@@ -14,7 +14,7 @@ class InboxList extends Component {
          MailItems = mailstest.map((mail,i) => {
           if((mail.isTrash === false)&&(mail.isSpam === false)) {
           return (
-          <li className="mail1" id="mailRight" ><MailItem {...this.props} key={i} i={i} mail={mail} /></li>
+          <li className="mail1" id="mailRight" ><MailItem key={i} i={i} mail={mail} /></li>
         )};
       });
     } 
