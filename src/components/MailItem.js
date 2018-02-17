@@ -27,13 +27,11 @@ class MailItemtest extends Component {
   }
    onClickSpamLocal = () =>{
     this.props.mail.isSpam = true;
-    this.props.mail.isTrash = false;
-    this.props.mail.showRight = false;  
+    this.props.mail.isTrash = false; 
   }
   onClickTrashLocal = () =>{
     this.props.mail.isTrash = true;  
     this.props.mail.isSpam = false;
-    this.props.mail.showRight = false;
   }  
   render() {
      const {mail} =this.props;

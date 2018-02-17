@@ -65,6 +65,11 @@ export function mailsdata(state = {mails:initalState}, action) {
           isReaded: true
         })
       }
+      if (index !== action.index) {
+         return Object.assign({}, mail, {
+          showRight: false
+        })
+      }
       return mail
     })
   })
