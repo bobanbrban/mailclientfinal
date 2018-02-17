@@ -21,7 +21,12 @@ export function GET_MAIL_NEW(index) {
     index
   }
 }
-
+export function GET_NEW_ID(index) {
+  return {
+    type: 'GET_NEW_ID',
+    index
+  }
+}
 export function SET_READED(index) {
   return {
     type: 'SET_READED',

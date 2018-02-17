@@ -23,16 +23,18 @@ class MailItemtest extends Component {
   }
   onClickReadedBack = () => {
      const { onSetReadedBack } = this.props;
-     onSetReadedBack(); 
+     onSetReadedBack();
   }
    onClickSpamLocal = () =>{
     this.props.mail.isSpam = true;
-    this.props.mail.isTrash = false; 
+    this.props.mail.isTrash = false;
+    this.props.mail.showRight = false;
   }
   onClickTrashLocal = () =>{
-    this.props.mail.isTrash = true;  
+    this.props.mail.isTrash = true;
     this.props.mail.isSpam = false;
-  }  
+    this.props.mail.showRight = false;
+  }
   render() {
      const {mail} =this.props;
      const { i } = this.props;
@@ -71,11 +73,11 @@ class MailItemtest extends Component {
     state
     });
   const mapDispachToProps = (dispatch,ownProps)=> ({
-    onSetTrash: () => dispatch({type: actionTypes.SET_TRASH,index: ownProps.i}),
-    onSetSpam: () => dispatch({type: actionTypes.SET_SPAM, index: ownProps.i}),
-    onSetReaded: () => dispatch({type: actionTypes.SET_READED, index: ownProps.i}),
-    onSetReadedBack: () => dispatch({type: actionTypes.SET_READED_BACK, index: ownProps.i}),
-    onSetRight: () => dispatch({type: actionTypes.SET_RIGHT, index: ownProps.i}),
+    onSetTrash: () => dispatch({type: actionTypes.SET_TRASH,index: ownProps.mail.id}),
+    onSetSpam: () => dispatch({type: actionTypes.SET_SPAM, index: ownProps.mail.id}),
+    onSetReaded: () => dispatch({type: actionTypes.SET_READED, index: ownProps.mail.id}),
+    onSetReadedBack: () => dispatch({type: actionTypes.SET_READED_BACK, index: ownProps.mail.id}),
+    onSetRight: () => dispatch({type: actionTypes.SET_RIGHT, index: ownProps.mail.id}),
   });
   const MailItem = connect(mapStateToProps, mapDispachToProps)(MailItemtest);
 
