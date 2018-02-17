@@ -15,6 +15,7 @@ class Header extends React.Component {
   componentWillMount() {
     const { getMail } = this.props;
     getMail();
+    onSetNewID();
   }
   componentDidMount() {
         let { onSetNewData } = this.props;
