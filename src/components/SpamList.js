@@ -14,7 +14,7 @@ class TrashList extends Component {
          MailItems = mailstest.map((mail,i) => {
           if(mail.isSpam === true && mail.isTrash === false) {
           return (
-          <li className="mail1" id="mailRight" ><MailItem key={i} i={i} mail={mail}/></li>
+          <li className="mail1" id="mailRight"><MailItem key={i} i={i} mail={mail}/></li>
         )};
       });
     } 
