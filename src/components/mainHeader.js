@@ -14,6 +14,7 @@ import '../stylesheets/mediaQueries.css';
 class Header extends React.Component {
   componentWillMount() {
     const { getMail } = this.props;
+    let { onSetNewID } = this.props;
     getMail();
     onSetNewID();
   }
