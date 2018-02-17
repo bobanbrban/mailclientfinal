@@ -1,5 +1,6 @@
 import { mailData } from '../data/mail-data';
 import * as actionTypes from '../actions/actionCreators';
+import uuid from 'uuid';
 
 const Trash = {isTrash: false};
 const Spam = {isSpam: false};
@@ -11,19 +12,29 @@ const initalState =[{...mail1,...Trash,...Spam,...Right},{...mail2,...Trash,...S
 
 export function mailsdata(state = {mails:initalState}, action) {
   switch(action.type) {
-    case actionTypes.GET_MAIL:
+  case actionTypes.GET_MAIL:
     return state
-   
    case actionTypes.GET_MAIL_NEW:
     return Object.assign({}, state, {
         mails: [
           ...initalState,...state.mails
         ]
       })
+    case actionTypes.GET_NEW_ID:
+     return Object.assign({}, state, {
+    mails: state.mails.map((mail, index) => {
+      if (mail.id.lenght !== 36) {
+        return Object.assign({}, mail, {
+          id: uuid.v4()
+        })
+        }
+      return mail
+    })
+  })
   case actionTypes.SET_RIGHT:
      return Object.assign({}, state, {
     mails: state.mails.map((mail, index) => {
-      if (index === action.index) {
+      if (mail.id === action.index) {
         return Object.assign({}, mail, {
           showRight: true
         })
@@ -34,11 +45,16 @@ export function mailsdata(state = {mails:initalState}, action) {
    case actionTypes.SET_TRASH:
       return Object.assign({}, state, {
     mails: state.mails.map((mail, index) => {
-      if (index === action.index) {
+      if (mail.id === action.index) {
         return Object.assign({}, mail, {
           isTrash: true,
           isSpam: false,
           showRight: false,
+        })
+      }
+       if (mail.id !== action.index) {
+         return Object.assign({}, mail, {
+          showRight: false
         })
       }
       return mail
@@ -47,11 +63,16 @@ export function mailsdata(state = {mails:initalState}, action) {
    case actionTypes.SET_SPAM:
      return Object.assign({}, state, {
     mails: state.mails.map((mail, index) => {
-      if (index === action.index) {
+      if (mail.id === action.index) {
         return Object.assign({}, mail, {
           isSpam: true,
           isTrash: false,
           showRight: false,
+        })
+      }
+       if (mail.id !== action.index) {
+         return Object.assign({}, mail, {
+          showRight: false
         })
       }
       return mail
@@ -60,12 +81,12 @@ export function mailsdata(state = {mails:initalState}, action) {
    case actionTypes.SET_READED:
     return Object.assign({}, state, {
     mails: state.mails.map((mail, index) => {
-      if (index === action.index) {
+      if (mail.id === action.index) {
         return Object.assign({}, mail, {
           isReaded: true
         })
       }
-      if (index !== action.index) {
+       if (mail.id !== action.index) {
          return Object.assign({}, mail, {
           showRight: false
         })
@@ -76,7 +97,7 @@ export function mailsdata(state = {mails:initalState}, action) {
    case actionTypes.SET_READED_BACK:
      return Object.assign({}, state, {
     mails: state.mails.map((mail, index) => {
-      if (index === action.index) {
+      if (mail.id === action.index) {
         return Object.assign({}, mail, {
           isReaded: false
         })
@@ -88,4 +109,3 @@ export function mailsdata(state = {mails:initalState}, action) {
          return state;
   }
 }
-

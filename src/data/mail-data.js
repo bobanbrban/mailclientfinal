@@ -5,7 +5,7 @@ import uuid from 'uuid';
         {
             "title": "Agave Lab",
             "subject": "Amazon SES Address Verification Request",
-            "id":uuid.v4(),
+            "id":0,
             "body": "Morbi dignissim metus sed diam pharetra, sit amet condimentum massa consequat. Duis dignissim dolor pulvinar augue pulvinar, ac molestie nunc dapibus. Ut ullamcorper velit et metus aliquam tincidunt. Duis vel sodales risus, a sodales nulla. Maecenas dignissim neque non ex mollis iaculis. Nam hendrerit libero id magna convallis ultricies. Fusce et elementum dolor, ut auctor mi. Integer varius vel eros vel ullamcorper. Donec id posuere lectus.Curabitur quis turpis a tellus posuere fermentum. Phasellus eu congue justo. Morbi non ornare ligula. Aliquam erat volutpat. Curabitur massa ante, cursus et nibh in, mollis scelerisque lorem. Fusce nunc magna, faucibus a nisi sit amet, aliquam convallis dui. Ut id arcu sit amet enim semper suscipit vitae sed ligula.",
             "from": "<matheo@agavelab.com>",
             "sender": "Slobodan Mihajlovic",
@@ -20,7 +20,7 @@ import uuid from 'uuid';
         {
             "title": "Agave Lab2",
             "subject": "Amazon SES Address Verification Request2",
-            "id":uuid.v4(),
+            "id":1,
             "body": "Morbi dignissim metus sed diam pharetra, sit amet condimentum massa consequat. Duis dignissim dolor pulvinar augue pulvinar, ac molestie nunc dapibus. Ut ullamcorper velit et metus aliquam tincidunt. Duis vel sodales risus, a sodales nulla. Maecenas dignissim neque non ex mollis iaculis. Nam hendrerit libero id magna convallis ultricies. Fusce et elementum dolor, ut auctor mi. Integer varius vel eros vel ullamcorper. Donec id posuere lectus.Curabitur quis turpis a tellus posuere fermentum. Phasellus eu congue justo. Morbi non ornare ligula. Aliquam erat volutpat. Curabitur massa ante, cursus et nibh in, mollis scelerisque lorem. Fusce nunc magna, faucibus a nisi sit amet, aliquam convallis dui. Ut id arcu sit amet enim semper suscipit vitae sed ligula.",
             "from": "<matheo@agavelab.com>",
             "sender": "Slobodan Mihajlovic",
