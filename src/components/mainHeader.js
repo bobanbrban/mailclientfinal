@@ -24,7 +24,7 @@ class Header extends React.Component {
          setInterval(() => {
                onSetNewData();
                onSetNewID();
-             }, 90000);
+             }, 5000);
  }
    render() {
        return (
@@ -40,9 +40,9 @@ const mapStateToProps = state =>  ({
  state
 });
 const mapDispachToProps = dispatch=> ({
- getMail: (index) => dispatch({type: actionTypes.GET_MAIL}),
- onSetNewData: (index) => dispatch({type: actionTypes.GET_MAIL_NEW}),
- onSetNewID: (index) => dispatch({type: actionTypes.GET_NEW_ID}),
+ getMail: () => dispatch({type: actionTypes.GET_MAIL}),
+ onSetNewData: () => dispatch({type: actionTypes.GET_MAIL_NEW}),
+ onSetNewID: () => dispatch({type: actionTypes.GET_NEW_ID}),
 });
 const mainHeader = connect(mapStateToProps, mapDispachToProps)(Header);
 

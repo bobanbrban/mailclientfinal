@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import MailItem from './MailItem';
+import SpamMail from './SpamMail';
 import '../stylesheets/mailList.css';
 import '../stylesheets/mailListHeader.css';
 import '../stylesheets/mailListItem.css';
 import '../stylesheets/mailBody.css';
 import '../stylesheets/mediaQueries.css';
 
-class TrashList extends Component {
+class SpamList extends Component {
     render() {
       let MailItems;
       let mailstest= this.props.mailList;
@@ -14,10 +14,10 @@ class TrashList extends Component {
          MailItems = mailstest.map((mail,i) => {
           if(mail.isSpam === true && mail.isTrash === false) {
           return (
-          <li className="mail1" id="mailRight"><MailItem key={i} i={i} mail={mail}/></li>
+          <li className="mail1" id="mailRight"><SpamMail key={i} i={i} mail={mail}/></li>
         )};
       });
-    } 
+    }
   return  (
       <div className="mailList">
        {MailItems}
@@ -25,5 +25,4 @@ class TrashList extends Component {
       );
   }
 }
-
-export default TrashList;
+export default SpamList;

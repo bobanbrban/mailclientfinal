@@ -10,23 +10,21 @@ import '../stylesheets/mailBody.css';
 import '../stylesheets/mediaQueries.css';
 
 class Inbox extends React.Component {
-
   render() {
        const { state } = this.props;
       return (
           <div>
             <div id="cloneTest" className="mailsList">
-              <InboxList mailList={state.mailsdata.mails}/>
+              <InboxList mailList={state.mailsdata.mails} {...this.props}/>
             </div>
           <img src={MailImage} className="MailPic" width="250px height=250px" alt="logo" />
         </div>
         )
     }
  }
-  const mapStateToProps = state =>  ({
+const mapStateToProps = state =>  ({
    state
  });
- 
 const inboxApp = connect(mapStateToProps)(Inbox);
 
 export default inboxApp;

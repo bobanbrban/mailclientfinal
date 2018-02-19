@@ -15,17 +15,15 @@ class Spam extends React.Component {
           <div>
             <div id="cloneTest" className="mailsList">
               <SpamList mailList={state.mailsdata.mails}/>
-            </div> 
+            </div>
           <img src={MailImage} className="MailPic" width="250px height=250px" alt="logo" />
         </div>
-        )    
+        )
     }
- }  
-  const mapStateToProps = state =>  ({
+ }
+const mapStateToProps = state =>  ({
    state
  });
-
 const spamApp = connect(mapStateToProps)(Spam);
 
 export default spamApp
-
