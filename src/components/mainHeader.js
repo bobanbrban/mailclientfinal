@@ -24,7 +24,7 @@ class Header extends React.Component {
          setInterval(() => {
                onSetNewData();
                onSetNewID();
-             }, 5000);
+             }, 90000);
  }
    render() {
        return (
